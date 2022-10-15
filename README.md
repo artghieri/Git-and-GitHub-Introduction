@@ -168,7 +168,8 @@ This is a text file.
 ```
 
 #### Your directory shoul look like this
-![Captura de tela 2022-10-15 150312](https://user-images.githubusercontent.com/102708433/196001578-32769090-4a91-4c36-9171-6a7a043aab98.png)
+![Captura de tela 2022-10-15 131804](https://user-images.githubusercontent.com/102708433/196002486-9cdd5e13-b2d3-4e9b-b5b9-2df4818a97a0.png)
+
 
 #### Use the follow command on terminal.
 ```
@@ -241,7 +242,7 @@ git push
 
 We are going to check our GitHub repository to see whether we have successfully pushed the changes to remote. 
 
-![Captura de tela 2022-10-15 152437](https://user-images.githubusercontent.com/102708433/196002360-4fc7a1c6-8598-49d7-b7ca-157085b59adc.png)
+![Captura de tela 2022-10-15 152437](https://user-images.githubusercontent.com/102708433/196002456-3c73b3ae-2208-49c5-b26d-24f7f83e9064.png)
 
 
 ## Git Cheat Sheet
