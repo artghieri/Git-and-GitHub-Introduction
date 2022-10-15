@@ -1,5 +1,4 @@
 
-
 ## What is Git?
 **Git is a open source distributed version control system ( DVCS )** designed to handle everything from small to very large projects with speed and efficiency created by **Linus Torvalds ( Linux creator )**. 
 
@@ -114,23 +113,135 @@ Cloning a remote repository means that we are making a copy of the repository fr
 
 #### We can simply clone the repository by providing an HTTPS link. 
 ```
-git clone repository_url 
+git clone your_repository_url
 ```
-![Captura de tela 2022-10-15 135643](https://user-images.githubusercontent.com/102708433/195998791-36ebc4b8-0f91-4e1b-89bc-acc4ee28539b.png)
+
+#### And the terminal output will be like this:
+
+```
+Cloning into 'My-First-Project'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 597 bytes | 59.00 KiB/s, done.
+```
 
 #### As you can see, after cloning the remote directory from GitHub, was created in my local repository a copy of it.
+![Captura de tela 2022-10-15 141718](https://user-images.githubusercontent.com/102708433/195999480-16a6dc07-e5f6-458b-9b21-a6531f1b83dc.png)
 
-#### Before we add files to our repository, make sure you are in the correct local directory.**
+---
+
+> **Warning**
+> **Before we add files to our repository, make sure you are in the correct local directory on terminal.**
 
 ```
 cd repository_name
 ```
-![Captura de tela 2022-10-15 140208](https://user-images.githubusercontent.com/102708433/195998909-a759baa4-d703-4d3e-8ec2-cb48dc33d8aa.png)
+
+---
 
 ### Adding Project Files
+You can add any directory, file, or data after the initial command. 
+
+```
+git add url file.file
+```
+
+> **Note**
+> **There's no need for URL if the file is on the root of your local directory.**
+
+If you want to add all files to the staging area, then use dot. 
+
+```
+git add .
+```
+
+#### Open the file README.md in your local directory with any text editor and write the follow sentence:
+```
+Hello, World.
+This is my First Project.
+```
+
+#### Create a new textfile in the root of your local directory and write the follow sentence:
+```
+This is a text file.
+```
+
+#### Your directory shoul look like this
+![Captura de tela 2022-10-15 150312](https://user-images.githubusercontent.com/102708433/196001578-32769090-4a91-4c36-9171-6a7a043aab98.png)
+
+#### Use the follow command on terminal.
+```
+git add .
+```
+#### And then use the follow command on terminal.
+```
+git status
+```
+
+#### This is expected ouput:
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        new file:   textfile.txt
+```
+
+#### And now we can see that our files have been modified and staged, wich means, they need to be prepare to be upload on GitHub.
+
+## Commit
+We will commit all the changes with a simple message, and the output shows all the new files in create mode.
+
+```
+git commit -m "my first commit"
+```
+
+#### This is the expected output:
+```
+[main 423f731] my first commit
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 textfile.txt
+ ```
+ 
+ > **Note**
+ > **If you want to send to your remote server a specific commit to differents files, follow this order to each file:**
+ ```
+ git add url file.file
+ 
+ git commit -m "my commit"
+```
+
+#### If you type git status again on terminal this is the expected output:
+```
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+```
+#### This means that our files are now ready to be upload to GitHub.
+
+### Push
+Syncing with GitHub remote repository requires a remote name and branch name `git push <remote-name> <branch-name>`. 
+
+If you have only one remote and one branch, then using `git push` will work.   
+
+After `git push`, the pop-up window will ask for the credentials, just add your GitHub username or password. 
+
+[Create a Personal Acess Token](https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to use in the password field instead of your GitHub passsword.
 
 
+```
+git push
+```
 
+
+We are going to check our GitHub repository to see whether we have successfully pushed the changes to remote. 
+
+![Captura de tela 2022-10-15 152437](https://user-images.githubusercontent.com/102708433/196002360-4fc7a1c6-8598-49d7-b7ca-157085b59adc.png)
 
 
 ## Git Cheat Sheet
