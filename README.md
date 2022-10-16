@@ -1,3 +1,5 @@
+![banner](https://user-images.githubusercontent.com/102708433/196017753-52c1d7bb-1456-4789-ad72-e6115680de1a.png)
+
 
 ## What is Git?
 **Git is a open source distributed version control system ( DVCS )** designed to handle everything from small to very large projects with speed and efficiency created by **Linus Torvalds ( Linux creator )**. 
@@ -330,7 +332,7 @@ git config --global color.ui auto
 ---
 
 ### SETUP & INIT
-**Configuring user information, initializing and cloning repositories.**
+**Configuring user information, initializing and cloning repositories**
 
 > **Create a new local repository.**
 
@@ -346,7 +348,7 @@ git clone url
 ---
 
 ### STAGE & SNAPSHOT
-Working with snapshots and the Git staging area
+**Working with snapshots and the Git staging area**
 
 > **Displays the status of your working directory. Options include new, staged, and modified files.**
 ```
@@ -381,7 +383,7 @@ git commit -m "descriptive message"
 ---
 
 ### BRANCH & MERGE
-Isolating work in branches, changing context, and integrating changes
+**Isolating work in branches, changing context, and integrating changes**
 
 > **List all local branches in repository. With -a: show all branches (with remote).**
 ```
@@ -415,8 +417,8 @@ git merge branch
 
 ---
 
-## INSPECT & COMPARE
-Examining logs, diffs and object information
+### INSPECT & COMPARE
+**Examining logs, diffs and object information**
 
 > **Show the commit history for the currently active branch**
 ```
@@ -470,8 +472,8 @@ git reflog
 
 ---
 
-## TRACKING PATH CHANGES
-Versioning file removes and path changes
+### TRACKING PATH CHANGES
+**Versioning file removes and path changes**
 git rm [file]
 delete the file from project and stage the removal for commit
 git mv [existing-path] [new-path]
@@ -481,97 +483,149 @@ show all commit logs with indication of any paths that moved
 
 ---
 
-## TAGGING KNOW COMMITS
-$ git tag
-List all tags.
-$ git tag [name] [commit sha]
-Create a tag reference named name for current commit. Add commit
-sha to tag a specific commit instead of current one.
-$ git tag -a [name] [commit sha]
-Create a tag object named name for current commit.
-$ git tag -d [name]
-Remove a tag from local repository.
+### TAGGING KNOW COMMITS
+
+> **List all tags.**
+```
+git tag
+```
+> **Create a tag reference named name for current commit. Add commit sha to tag a specific commit instead of current one.**
+```
+git tag name commit sha
+```
+
+> **Create a tag object named name for current commit.**
+```
+git tag -a name commit sha
+```
+
+> **Remove a tag from local repository.**
+```
+git tag -d name
+```
 
 ---
 
-## SHARE & UPDATE
-Retrieving updates from another repository and updating local repos
-git remote add [alias] [url]
-add a git URL as an alias
-git fetch [alias]
-fetch down all the branches from that Git remote
-git merge [alias]/[branch]
-merge a remote branch into your current branch to bring it up to date
-git push [alias] [branch]
-Transmit local branch commits to the remote repository branch
+### SHARE & UPDATE
+**Retrieving updates from another repository and updating local repository**
+
+> **Add a git URL as an alias.**
+```
+git remote add alias url
+```
+
+> **Fetch down all the branches from that Git remote.**
+```
+git fetch alias
+```
+
+> **Merge a remote branch into your current branch to bring it up to date.**
+```
+git merge alias/branch
+```
+
+> **Transmit local branch commits to the remote repository branch.**
+```
+git push alias branch
+```
+
+> **fetch and merge any commits from the tracking remote branch.**
+```
 git pull
-fetch and merge any commits from the tracking remote branch
-$ git fetch [remote]
-Fetch changes from the remote, but not update tracking branches.
-$ git fetch --prune [remote]
-Delete remote Refs that were removed from the remote repository.
-$ git pull [remote]
-Fetch changes from the remote and merge current branch with its
-upstream.
-$ git push [--tags] [remote]
-Push local changes to the remote. Use --tags to push tags.
-$ git push -u [remote] [branch]
-Push local branch to remote repository. Set its copy as an upstream.
+```
+
+> **Fetch changes from the remote, but not update tracking branches.**
+```
+git fetch remote
+```
+
+> **Delete remote Refs that were removed from the remote repository.**
+```
+git fetch --prune remote
+```
+
+> **Fetch changes from the remote and merge current branch with its upstream.**
+```
+git pull remote
+```
+
+> **Push local changes to the remote. Use --tags to push tags.**
+```
+git push --tags remote
+```
+
+> **Push local branch to remote repository. Set its copy as an upstream.**
+```
+git push -u remote branch
+```
 
 ---
 
-## REWRITE HISTORY
-Rewriting branches, updating commits and clearing history
-git rebase [branch]
-apply any commits of current branch ahead of specified one
-git reset --hard [commit]
-clear staging area, rewrite working tree from specified commit
-$ git reset [--hard] [target reference]
-Switches the current branch to the target reference, leaving
-a difference as an uncommitted change. When --hard is used,
-all changes are discarded.
-$ git revert [commit sha]
-Create a new commit, reverting changes from the specified commit.
-It generates an inversion of changes.
+### REWRITE HISTORY
+**Rewriting branches, updating commits and clearing history**
+
+> **Apply any commits of current branch ahead of specified one.**
+```
+git rebase branch
+```
+
+> **Clear staging area, rewrite working tree from specified commit.**
+```
+git reset --hard commit
+```
+
+> **Switches the current branch to the target reference, leaving a difference as an uncommitted change.**   
+> **When --hard is used, all changes are discarded.**
+```
+git reset --hard target reference
+```
+
+> **Create a new commit, reverting changes from the specified commit. It generates an inversion of changes.**
+```
+git revert commit sha
+```
 
 ---
 
-## TEMPORARY COMMITS
-Temporarily store modified, tracked files in order to change branches
+### TEMPORARY COMMITS
+**Temporarily store modified, tracked files in order to change branches**
 
+> **Save modified and staged changes.**
+```
 git stash
-Save modified and staged changes
+```
+
+> **List stack-order of stashed file changes.**
+```
 git stash list
-list stack-order of stashed file changes
+```
+
+> **Write working from top of stash stack.**
+```
 git stash pop
-write working from top of stash stack
+```
+
+> **Discard the changes from top of stash stack.**
+```
 git stash drop
-discard the changes from top of stash stack
+```
 
 ---
 
-## IGNORING PATTERNS
-Preventing unintentional staging or commiting of files
+### IGNORING PATTERNS
+**Preventing unintentional staging or commiting of files**
+
+> **Save a file with desired paterns as .gitignore with either direct string matches or wildcard globs.**
+```
 logs/
 *.notes
 pattern*/
-Save a file with desired paterns as .gitignore with either direct string
-matches or wildcard globs.
-git config --global core.excludesfile [file]
-system wide ignore patern for all local repositories
+```
 
+> **System wide ignore patern for all local repositories.**
+```
+git config --global core.excludesfile file
+```
 
-$ cat .gitignore
-/logs/*
-!logs/.gitkeep
-/tmp
-*.swp
-Verify the .gitignore file exists in your project and ignore certain type
-of files, such as all files in logs directory (excluding the .gitkeep file),
-whole tmp directory and all files *.swp. File ignoring will work for the
-directory (and children directories) where .gitignore file is placed.
-
-
-
-
-<!-- https://git-scm.com/about/branching-and-merging --!>
+## Additional Reference
+For more reference about Git and all his functionalities check [Git Official Documentation](https://git-scm.com/doc)
