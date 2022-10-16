@@ -314,12 +314,12 @@ In this article we have learned about Git and GitHub and why they are important 
 ### SETUP
 **Configuring user information used across all local repositories**
 
-> **Set the name that will be attached to your commits and tags.**
+> **Set the name that will be attached to your commits and tags**
 ```
 git config --global user.name your_name
 ```
 
-> **Set the e-mail address that will be attached to your commits and tags.**
+> **Set the e-mail address that will be attached to your commits and tags**
 ```
 git config --global user.email you@example.com
 ```
@@ -350,32 +350,32 @@ git clone url
 ### STAGE & SNAPSHOT
 **Working with snapshots and the Git staging area**
 
-> **Displays the status of your working directory. Options include new, staged, and modified files.**
+> **Displays the status of your working directory. Options include new, staged, and modified files**
 ```
 git status
 ```
 
-> **Add a file to the staging area.**
+> **Add a file to the staging area**
 ```
 git add file
 ```
 
->  **Revert your repository to a previous known working state.**
+>  **Revert your repository to a previous known working state**
 ```
 git reset file
 ```
 
-> **Show changes between working directory and staging area.**
+> **Show changes between working directory and staging area**
 ```
 git diff
 ```
 
-> **Shows any changes between the staging area and the repository.**
+> **Shows any changes between the staging area and the repository**
 ```
 git diff --staged
 ```
 
-> **Create a new commit from changes added to the staging area.**
+> **Create a new commit from changes added to the staging area**
 ```
 git commit -m "descriptive message"
 ```
@@ -390,27 +390,27 @@ git commit -m "descriptive message"
 git branch -a
 ```
 
-> **Create new branch, referencing the current HEAD.**
+> **Create new branch, referencing the current HEAD**
 ```
 git branch name
 ```
 
-> **Remove selected branch, if it is already merged into any other. *-D* instead of *-d* forces deletion.**
+> **Remove selected branch, if it is already merged into any other. *-D* instead of *-d* forces deletion**
 ```
 git branch -d name
 ```
 
-> **Switch working directory to the specified branch. With -b: Git will create the specified branch if it does not exist.** 
+> **Switch working directory to the specified branch. With -b: Git will create the specified branch if it does not exist** 
 ```
 git checkout -b name
 ```
 
-> **Discard changes in working directory. This operation is unrecoverable.**
+> **Discard changes in working directory. This operation is unrecoverable**
 ```
 git checkout -- file
 ```
 
-> **Join specified [from name] branch into your current branch (the one you are on currently).**
+> **Join specified [from name] branch into your current branch (the one you are on currently)**
 ```
 git merge branch
 ```
@@ -425,27 +425,27 @@ git merge branch
 git log
 ```
 
-> **List commit history of current branch. -n count limits list to last n commits.**
+> **List commit history of current branch. -n count limits list to last n commits**
 ```
 git log -n count
 ```
 
-> **An overview with reference labels and history graph. One commit per line.**
+> **An overview with reference labels and history graph. One commit per line**
 ```
 git log --oneline --graph --decorate
 ```
 
-> **Show the commits on branchA that are not on branchB.**
+> **Show the commits on branchA that are not on branchB**
 ```
 git log branchB..branchA
 ```
 
-> **Show the commits that changed file, even across renames.**
+> **Show the commits that changed file, even across renames**
 ```
 git log --follow file
 ```
 
-> **Show the diff of what is in branchA that is not in branchB.**
+> **Show the diff of what is in branchA that is not in branchB**
 ```
 git diff branchB...branchA
 ```
@@ -455,17 +455,17 @@ git diff branchB...branchA
 git show SHA
 ```
 
-> **List commits that are present on the current branch and not merged into ref. A ref can be a branch name or a tag name.**
+> **List commits that are present on the current branch and not merged into ref. A ref can be a branch name or a tag name**
 ```
 $ git log ref..
 ```
 
-> **List commit that are present on ref and not merged into current branch.**
+> **List commit that are present on ref and not merged into current branch**
 ```
 git log ..ref
 ```
 
-> **List operations (e.g. checkouts or commits) made on local repository.**
+> **List operations (e.g. checkouts or commits) made on local repository**
 ```
 git reflog
 ```
@@ -474,32 +474,43 @@ git reflog
 
 ### TRACKING PATH CHANGES
 **Versioning file removes and path changes**
-git rm [file]
-delete the file from project and stage the removal for commit
-git mv [existing-path] [new-path]
-change an existing file path and stage the move
+
+> **Delete the file from project and stage the removal for commit**
+```
+git rm file
+```
+
+> **Change an existing file path and stage the move**
+```
+git mv existing-path new-path
+```
+
+> **Show all commit logs with indication of any paths that moved**
+```
 git log --stat -M
-show all commit logs with indication of any paths that moved
+```
 
 ---
 
 ### TAGGING KNOW COMMITS
+**Git has the ability to tag specific points in a repository’s history as being important**
 
-> **List all tags.**
+> **List all tags**
 ```
 git tag
 ```
-> **Create a tag reference named name for current commit. Add commit sha to tag a specific commit instead of current one.**
+
+> **Create a tag reference named name for current commit. Add commit sha to tag a specific commit instead of current one**
 ```
 git tag name commit sha
 ```
 
-> **Create a tag object named name for current commit.**
+> **Create a tag object named name for current commit**
 ```
 git tag -a name commit sha
 ```
 
-> **Remove a tag from local repository.**
+> **Remove a tag from local repository**
 ```
 git tag -d name
 ```
@@ -509,52 +520,52 @@ git tag -d name
 ### SHARE & UPDATE
 **Retrieving updates from another repository and updating local repository**
 
-> **Add a git URL as an alias.**
+> **Add a git URL as an alias**
 ```
 git remote add alias url
 ```
 
-> **Fetch down all the branches from that Git remote.**
+> **Fetch down all the branches from that Git remote**
 ```
 git fetch alias
 ```
 
-> **Merge a remote branch into your current branch to bring it up to date.**
+> **Merge a remote branch into your current branch to bring it up to date**
 ```
 git merge alias/branch
 ```
 
-> **Transmit local branch commits to the remote repository branch.**
+> **Transmit local branch commits to the remote repository branch**
 ```
 git push alias branch
 ```
 
-> **fetch and merge any commits from the tracking remote branch.**
+> **fetch and merge any commits from the tracking remote branch**
 ```
 git pull
 ```
 
-> **Fetch changes from the remote, but not update tracking branches.**
+> **Fetch changes from the remote, but not update tracking branches**
 ```
 git fetch remote
 ```
 
-> **Delete remote Refs that were removed from the remote repository.**
+> **Delete remote Refs that were removed from the remote repository**
 ```
 git fetch --prune remote
 ```
 
-> **Fetch changes from the remote and merge current branch with its upstream.**
+> **Fetch changes from the remote and merge current branch with its upstream**
 ```
 git pull remote
 ```
 
-> **Push local changes to the remote. Use --tags to push tags.**
+> **Push local changes to the remote. Use --tags to push tags**
 ```
 git push --tags remote
 ```
 
-> **Push local branch to remote repository. Set its copy as an upstream.**
+> **Push local branch to remote repository. Set its copy as an upstream**
 ```
 git push -u remote branch
 ```
@@ -564,23 +575,23 @@ git push -u remote branch
 ### REWRITE HISTORY
 **Rewriting branches, updating commits and clearing history**
 
-> **Apply any commits of current branch ahead of specified one.**
+> **Apply any commits of current branch ahead of specified one**
 ```
 git rebase branch
 ```
 
-> **Clear staging area, rewrite working tree from specified commit.**
+> **Clear staging area, rewrite working tree from specified commit**
 ```
 git reset --hard commit
 ```
 
-> **Switches the current branch to the target reference, leaving a difference as an uncommitted change.**   
+> **Switches the current branch to the target reference, leaving a difference as an uncommitted change**   
 > **When --hard is used, all changes are discarded.**
 ```
 git reset --hard target reference
 ```
 
-> **Create a new commit, reverting changes from the specified commit. It generates an inversion of changes.**
+> **Create a new commit, reverting changes from the specified commit. It generates an inversion of changes**
 ```
 git revert commit sha
 ```
@@ -590,22 +601,22 @@ git revert commit sha
 ### TEMPORARY COMMITS
 **Temporarily store modified, tracked files in order to change branches**
 
-> **Save modified and staged changes.**
+> **Save modified and staged changes**
 ```
 git stash
 ```
 
-> **List stack-order of stashed file changes.**
+> **List stack-order of stashed file changes**
 ```
 git stash list
 ```
 
-> **Write working from top of stash stack.**
+> **Write working from top of stash stack**
 ```
 git stash pop
 ```
 
-> **Discard the changes from top of stash stack.**
+> **Discard the changes from top of stash stack**
 ```
 git stash drop
 ```
@@ -615,14 +626,14 @@ git stash drop
 ### IGNORING PATTERNS
 **Preventing unintentional staging or commiting of files**
 
-> **Save a file with desired paterns as .gitignore with either direct string matches or wildcard globs.**
+> **Save a file with desired paterns as .gitignore with either direct string matches or wildcard globs**
 ```
 logs/
 *.notes
 pattern*/
 ```
 
-> **System wide ignore patern for all local repositories.**
+> **System wide ignore patern for all local repositories**
 ```
 git config --global core.excludesfile file
 ```
