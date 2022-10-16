@@ -116,8 +116,7 @@ Cloning a remote repository means that we are making a copy of the repository fr
 git clone your_repository_url
 ```
 
-#### And the terminal output will be like this:
-
+#### And the expected terminal output should be like this:
 ```
 Cloning into 'My-First-Project'...
 remote: Enumerating objects: 3, done.
@@ -126,7 +125,7 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), 597 bytes | 59.00 KiB/s, done.
 ```
 
-#### As you can see, after cloning the remote directory from GitHub, was created in my local repository a copy of it.
+#### After cloning the remote directory from GitHub, was created in my local repository a copy of `My-First-Project`.
 ![Captura de tela 2022-10-15 141718](https://user-images.githubusercontent.com/102708433/195999480-16a6dc07-e5f6-458b-9b21-a6531f1b83dc.png)
 
 ---
@@ -141,7 +140,7 @@ cd repository_name
 ---
 
 ### Adding Project Files
-You can add any directory, file, or data after the initial command. 
+You can add any directory, file, or data after the initial command `git add`. 
 
 ```
 git add url file.file
@@ -180,7 +179,7 @@ git add .
 git status
 ```
 
-#### This is expected ouput:
+#### And the expected terminal output should be like this:
 ```
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -191,7 +190,7 @@ Changes to be committed:
         new file:   textfile.txt
 ```
 
-#### And now we can see that our files have been modified and staged, wich means, they need to be prepare to be upload on GitHub.
+#### Now our files have been modified and staged in the local directory, needed to be ready (commited) to be upload on GitHub.
 
 ## Commit
 We will commit all the changes with a simple message, and the output shows all the new files in create mode.
@@ -200,7 +199,7 @@ We will commit all the changes with a simple message, and the output shows all t
 git commit -m "my first commit"
 ```
 
-#### This is the expected output:
+#### And the expected terminal output should be like this:
 ```
 [main 423f731] my first commit
  2 files changed, 3 insertions(+), 1 deletion(-)
@@ -223,7 +222,7 @@ Your branch is ahead of 'origin/main' by 1 commit.
 
 nothing to commit, working tree clean
 ```
-#### That means our files are now ready to be upload to GitHub.
+#### Now our files are ready to be upload to GitHub.
 
 ### Push
 Syncing with GitHub remote repository requires a remote name and branch name `git push <remote-name> <branch-name>`. 
@@ -284,17 +283,66 @@ After that, select the readme branch  which we want to merge with the base (main
 
 The maintainer of the repository will compare your changes and merge them when they have passed all the tests. In our case, you are the maintainer, so click on the merge request to blend changes with the main branch. 
 
-![Captura de tela 2022-10-15 155210](https://user-images.githubusercontent.com/102708433/196003328-b3755345-3d5a-4640-8610-e6ad26d7c08d.png)
+![merge](https://user-images.githubusercontent.com/102708433/196003328-b3755345-3d5a-4640-8610-e6ad26d7c08d.png)
 
-![Captura de tela 2022-10-15 154936](https://user-images.githubusercontent.com/102708433/196003333-eb117df6-70a7-4ab8-a068-a47724d183c0.png)
+![merge](https://user-images.githubusercontent.com/102708433/196003333-eb117df6-70a7-4ab8-a068-a47724d183c0.png)
 
 Congratulations, we have successfully created a pull request and merged it with the main branch. You can view the changes on the main branch here. 
 
-![Captura de tela 2022-10-15 154955](https://user-images.githubusercontent.com/102708433/196003355-5e41db19-1002-47df-a1bf-df53870d6f30.png)
+![merge](https://user-images.githubusercontent.com/102708433/196003355-5e41db19-1002-47df-a1bf-df53870d6f30.png)
 
+---
 
 ## Git Cheat Sheet
 #### This cheat sheet features the most important and commonly used Git commands for easy reference.
+
+### SETUP
+Configuring user information used across all local repositories
+
+| Command                                      | Description                                                 |  
+| :------                                      | :------                                                      |
+| `git config --global user.name your_name`    | **Set the name that will be attached to your commits and tags.** |
+| `git config --global user.email you@example.com` | **Set the e-mail address that will be attached to your commits and tags.** |
+| `git config --global color.ui auto`          | **Enable some colorization of Git output.** |
+
+### SETUP & INIT
+Configuring user information, initializing and cloning repositories
+
+| Command                                      | Description                                                 |  
+| :------                                      | :------                                                      |
+| `git init project_name`    | **Create a new local repository.** |
+| `git clone url` | **Downloads a project with the entire history from the remote repository.** |
+
+### STAGE & SNAPSHOT
+Working with snapshots and the Git staging area
+
+| Command                                      | Description                                                 |  
+| :------                                      | :------                                                      |
+| `git status`    | **Displays the status of your working directory. Options include new, staged, and modified files.** |
+| `git add file` | **Add a file to the staging area.** |
+| `git reset file` | **Revert your repository to a previous known working state.** |
+| `git diff` | **Show changes between working directory and staging area.** |
+| `git diff --staged` | **Shows any changes between the staging area and the repository.** |
+| `git commit -m "descriptive message"` | **Create a new commit from changes added to the staging area.** |
+
+
+### BRANCH & MERGE
+Isolating work in branches, changing context, and integrating changes
+
+| Command                                      | Description                                                 |  
+| :------                                      | :------                                                     |
+| `git branch -a` | **List all local branches in repository. With -a: show all branches (with remote).** |
+| `git branch name` | **Create new branch, referencing the current HEAD.** |
+| `git branch -d name` | **Remove selected branch, if it is already merged into any other. *-D* instead of *-d* forces deletion.** |
+| ` git checkout -b name` | **Switch working directory to the specified branch. With -b: Git will create the specified branch if it does not exist.** |
+| ` git checkout -- file` | **Discard changes in working directory. This operation is unrecoverable.** |
+| `git merge branch` | **Join specified [from name] branch into your current branch (the one you are on currently).** |
+| `` | ** ** |
+
+
+
+
+
 
 
 
