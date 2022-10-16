@@ -7,7 +7,7 @@ In other words, Git enables you to store code, track revision history, merge cod
 ### How does it Work?
 Git stores your files and their development history in a local repository. Whenever you save changes you have made, Git creates a commit. A commit is a snapshot of current files. These commits are linked with each other, forming a development history graph. It allows us to revert back to the previous commit, compare changes, and view the progress of the development project. The commits are identified by a unique hash which is used to compare and revert the changes made.
 
-![git-workflow](https://user-images.githubusercontent.com/102708433/195977441-74cf5a49-dc4e-4562-8b33-edcec7b1add4.png)
+![b](https://user-images.githubusercontent.com/102708433/196016877-52049e28-a788-467a-bbd9-a74d92405482.png)
 
 #### Before we go deeper in the Git Universe, we need to establish two extremely important concepts that will be used in your future projects.
 
@@ -16,11 +16,12 @@ Git stores your files and their development history in a local repository. Whene
 
 #### Before we go into using branches, I want to show you a visual representation of our repository which looks like this:
 
-![Captura de tela 2022-10-15 062401](https://user-images.githubusercontent.com/102708433/195979205-1abb0f59-3091-4cf0-af78-e5fb4ec5259c.png)
+![gagaga](https://user-images.githubusercontent.com/102708433/196016881-f6b1ebb3-3d65-4bca-a503-4eab53061631.png)
 
 As you can see, in our master branch were made just one modification of the original file, and i was thinking to change a considerable part of the code, but i'm not so sure that it's gonna work. To avoid any trouble, i will create a new branch to see what can happen to my code.
 
-![Captura de tela 2022-10-15 063831](https://user-images.githubusercontent.com/102708433/195979692-b402e2a6-b832-4697-b0a7-5728455b86b2.png)
+![2das](https://user-images.githubusercontent.com/102708433/196017028-aa6e57e7-101d-4499-b4cc-53608c198fc9.png)
+
 
 It worked!, so i merged that version allocated in the new branch to my master branch, and now the master branch has two modifications. 
 
@@ -36,7 +37,8 @@ A file in the **modified state** has some changes made to it but it's not yet sa
 #### Staged State
 A file in the **staged state means** it is ready to be committed. In this state, all necessary changes have been made so the next step is to move the file to the **commit state.**
 
-![Captura de tela 2022-10-15 070702](https://user-images.githubusercontent.com/102708433/195980716-af116640-cde5-4e77-adeb-8f1462aac9b3.png)
+![da](https://user-images.githubusercontent.com/102708433/196017216-bb12b0ce-b2a5-4864-9f5e-050019d272c3.png)
+
 
 ### What are the benefits of Git?
 
@@ -291,57 +293,283 @@ Congratulations, we have successfully created a pull request and merged it with 
 
 ![merge](https://user-images.githubusercontent.com/102708433/196003355-5e41db19-1002-47df-a1bf-df53870d6f30.png)
 
+## Conclusion
+GitHub plays a larger role in promoting open-source projects by providing a free software development ecosystem for all. 
+
+In this article we have learned about Git and GitHub and why they are important for any kind of project. The tutorial also introduces you to basic Git commands and provides hands-on experience on how to track changes in data and code.
+
 ---
 
 ## Git Cheat Sheet
 #### This cheat sheet features the most important and commonly used Git commands for easy reference.
 
-### SETUP
-Configuring user information used across all local repositories
+![a](https://user-images.githubusercontent.com/102708433/196017262-cc8d8ba0-210e-4161-9607-5bf34893b4d5.png)
 
-| Command                                      | Description                                                 |  
-| :------                                      | :------                                                      |
-| `git config --global user.name your_name`    | **Set the name that will be attached to your commits and tags.** |
-| `git config --global user.email you@example.com` | **Set the e-mail address that will be attached to your commits and tags.** |
-| `git config --global color.ui auto`          | **Enable some colorization of Git output.** |
+![asda](https://user-images.githubusercontent.com/102708433/196017260-752c6ad0-6a0b-46da-9b7b-a92b2fa130c1.png)
+
+---
+
+### SETUP
+**Configuring user information used across all local repositories**
+
+> **Set the name that will be attached to your commits and tags.**
+```
+git config --global user.name your_name
+```
+
+> **Set the e-mail address that will be attached to your commits and tags.**
+```
+git config --global user.email you@example.com
+```
+
+> **Enable some colorization of Git output.**
+```
+git config --global color.ui auto
+```
+
+---
 
 ### SETUP & INIT
-Configuring user information, initializing and cloning repositories
+**Configuring user information, initializing and cloning repositories.**
 
-| Command                                      | Description                                                 |  
-| :------                                      | :------                                                      |
-| `git init project_name`    | **Create a new local repository.** |
-| `git clone url` | **Downloads a project with the entire history from the remote repository.** |
+> **Create a new local repository.**
+
+```
+git init project_name
+```
+
+> **Downloads a project with the entire history from the remote repository.**
+```
+git clone url
+```
+
+---
 
 ### STAGE & SNAPSHOT
 Working with snapshots and the Git staging area
 
-| Command                                      | Description                                                 |  
-| :------                                      | :------                                                      |
-| `git status`    | **Displays the status of your working directory. Options include new, staged, and modified files.** |
-| `git add file` | **Add a file to the staging area.** |
-| `git reset file` | **Revert your repository to a previous known working state.** |
-| `git diff` | **Show changes between working directory and staging area.** |
-| `git diff --staged` | **Shows any changes between the staging area and the repository.** |
-| `git commit -m "descriptive message"` | **Create a new commit from changes added to the staging area.** |
+> **Displays the status of your working directory. Options include new, staged, and modified files.**
+```
+git status
+```
 
+> **Add a file to the staging area.**
+```
+git add file
+```
+
+>  **Revert your repository to a previous known working state.**
+```
+git reset file
+```
+
+> **Show changes between working directory and staging area.**
+```
+git diff
+```
+
+> **Shows any changes between the staging area and the repository.**
+```
+git diff --staged
+```
+
+> **Create a new commit from changes added to the staging area.**
+```
+git commit -m "descriptive message"
+```
+
+---
 
 ### BRANCH & MERGE
 Isolating work in branches, changing context, and integrating changes
 
-| Command                                      | Description                                                 |  
-| :------                                      | :------                                                     |
-| `git branch -a` | **List all local branches in repository. With -a: show all branches (with remote).** |
-| `git branch name` | **Create new branch, referencing the current HEAD.** |
-| `git branch -d name` | **Remove selected branch, if it is already merged into any other. *-D* instead of *-d* forces deletion.** |
-| ` git checkout -b name` | **Switch working directory to the specified branch. With -b: Git will create the specified branch if it does not exist.** |
-| ` git checkout -- file` | **Discard changes in working directory. This operation is unrecoverable.** |
-| `git merge branch` | **Join specified [from name] branch into your current branch (the one you are on currently).** |
-| `` | ** ** |
+> **List all local branches in repository. With -a: show all branches (with remote).**
+```
+git branch -a
+```
+
+> **Create new branch, referencing the current HEAD.**
+```
+git branch name
+```
+
+> **Remove selected branch, if it is already merged into any other. *-D* instead of *-d* forces deletion.**
+```
+git branch -d name
+```
+
+> **Switch working directory to the specified branch. With -b: Git will create the specified branch if it does not exist.** 
+```
+git checkout -b name
+```
+
+> **Discard changes in working directory. This operation is unrecoverable.**
+```
+git checkout -- file
+```
+
+> **Join specified [from name] branch into your current branch (the one you are on currently).**
+```
+git merge branch
+```
+
+---
+
+## INSPECT & COMPARE
+Examining logs, diffs and object information
+
+> **Show the commit history for the currently active branch**
+```
+git log
+```
+
+> **List commit history of current branch. -n count limits list to last n commits.**
+```
+git log -n count
+```
+
+> **An overview with reference labels and history graph. One commit per line.**
+```
+git log --oneline --graph --decorate
+```
+
+> **Show the commits on branchA that are not on branchB.**
+```
+git log branchB..branchA
+```
+
+> **Show the commits that changed file, even across renames.**
+```
+git log --follow file
+```
+
+> **Show the diff of what is in branchA that is not in branchB.**
+```
+git diff branchB...branchA
+```
+
+> **Show any object in Git in human-readable format**
+```
+git show SHA
+```
+
+> **List commits that are present on the current branch and not merged into ref. A ref can be a branch name or a tag name.**
+```
+$ git log ref..
+```
+
+> **List commit that are present on ref and not merged into current branch.**
+```
+git log ..ref
+```
+
+> **List operations (e.g. checkouts or commits) made on local repository.**
+```
+git reflog
+```
+
+---
+
+## TRACKING PATH CHANGES
+Versioning file removes and path changes
+git rm [file]
+delete the file from project and stage the removal for commit
+git mv [existing-path] [new-path]
+change an existing file path and stage the move
+git log --stat -M
+show all commit logs with indication of any paths that moved
+
+---
+
+## TAGGING KNOW COMMITS
+$ git tag
+List all tags.
+$ git tag [name] [commit sha]
+Create a tag reference named name for current commit. Add commit
+sha to tag a specific commit instead of current one.
+$ git tag -a [name] [commit sha]
+Create a tag object named name for current commit.
+$ git tag -d [name]
+Remove a tag from local repository.
+
+---
+
+## SHARE & UPDATE
+Retrieving updates from another repository and updating local repos
+git remote add [alias] [url]
+add a git URL as an alias
+git fetch [alias]
+fetch down all the branches from that Git remote
+git merge [alias]/[branch]
+merge a remote branch into your current branch to bring it up to date
+git push [alias] [branch]
+Transmit local branch commits to the remote repository branch
+git pull
+fetch and merge any commits from the tracking remote branch
+$ git fetch [remote]
+Fetch changes from the remote, but not update tracking branches.
+$ git fetch --prune [remote]
+Delete remote Refs that were removed from the remote repository.
+$ git pull [remote]
+Fetch changes from the remote and merge current branch with its
+upstream.
+$ git push [--tags] [remote]
+Push local changes to the remote. Use --tags to push tags.
+$ git push -u [remote] [branch]
+Push local branch to remote repository. Set its copy as an upstream.
+
+---
+
+## REWRITE HISTORY
+Rewriting branches, updating commits and clearing history
+git rebase [branch]
+apply any commits of current branch ahead of specified one
+git reset --hard [commit]
+clear staging area, rewrite working tree from specified commit
+$ git reset [--hard] [target reference]
+Switches the current branch to the target reference, leaving
+a difference as an uncommitted change. When --hard is used,
+all changes are discarded.
+$ git revert [commit sha]
+Create a new commit, reverting changes from the specified commit.
+It generates an inversion of changes.
+
+---
+
+## TEMPORARY COMMITS
+Temporarily store modified, tracked files in order to change branches
+
+git stash
+Save modified and staged changes
+git stash list
+list stack-order of stashed file changes
+git stash pop
+write working from top of stash stack
+git stash drop
+discard the changes from top of stash stack
+
+---
+
+## IGNORING PATTERNS
+Preventing unintentional staging or commiting of files
+logs/
+*.notes
+pattern*/
+Save a file with desired paterns as .gitignore with either direct string
+matches or wildcard globs.
+git config --global core.excludesfile [file]
+system wide ignore patern for all local repositories
 
 
-
-
+$ cat .gitignore
+/logs/*
+!logs/.gitkeep
+/tmp
+*.swp
+Verify the .gitignore file exists in your project and ignore certain type
+of files, such as all files in logs directory (excluding the .gitkeep file),
+whole tmp directory and all files *.swp. File ignoring will work for the
+directory (and children directories) where .gitignore file is placed.
 
 
 
