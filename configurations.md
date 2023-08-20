@@ -50,7 +50,8 @@ git config --global user.name "your-user-name"
 git config --global user.email "your@email.com"
 ```
 
-Define the *username* and the *e-mail* to be used for all commits by the current user.
+> [!IMPORTANT]
+> The *username* and the *e-mail* defined will be used for all *commits* by the current user.
 
 #
 
