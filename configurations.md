@@ -23,18 +23,15 @@ git config --global user.email "your@email.com"
 
 <br>
 
-## Starting a new Project
-Let's start creating our first project on **GitHub**.
+## Creating a New Project on GitHub
 
 ### Creating a new Repository
 
-At first, go to your repositories e click on the `new` icon to create a remote repository.
-
-<br>
+At first, go to your repositories and select the `new` icon to create a remote repository.
 
 ![new-icon](https://user-images.githubusercontent.com/102708433/195996708-dd47591d-52b6-4405-b0ff-0f650cffaeda.png)
 
-# 
+<br>
 
 After that, type the repository name, to this example i will use "My First Project", and add a simple description. 
 
