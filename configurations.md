@@ -1,26 +1,21 @@
+## Installing Git
 
-## Getting Started
-In order to use all **Git** and **GitHub** features, we need to establish a proper development environment in your system to enable them. 
+Git supports all operating systems. You can install it using command-line tools or directly download and install the setup.
 
-#### In this section we will learn how to install Git and configure it to acess your GitHub repository.
+|  System  |  Description |
+|  ------------- |  ------------- |
+|  `GNU/Linux`  | For `Debian/Ubuntu-based` operating systems use `apt-get install git`, and if you are using another `Linux-based system`, check out the complete list of installing commands [here](https://git-scm.com/download/linux). |
+|  `MacOS`  |  If you have [homebrew](https://brew.sh) installed, use this command to download and install **Git**: `brew install git`. If it's not the case, check out the complete list of installing commands for `macOS` system [here](https://git-scm.com/download/mac) |
+|  `Windows` | Installing **Git** on `Windows` is hassle-free. Just go to the download [page](https://git-scm.com/download/win), click on the specific Windows version, and download and install the setup.  |
 
-### Installing Git
-#### Git supports all operating systems. You can install it using command-line tools or directly download and install the setup.
+> [!NOTE]
+> For more reference on how to install **Git** in your operating system, check *["Git Install Tutorial"](https://www.datacamp.com/tutorial/git-install-tutorial)*
 
-#### GNU/Linux
-For Debian/Ubuntu-based operating systems use `apt-get install git`, and if you are using another Linux-based system, check out the complete list of installing commands [here](https://git-scm.com/download/linux).
+<br>
 
-#### MacOS
-If you have [homebrew](https://brew.sh) installed, use this command to download and install Git: `brew install git`. If it's not the case, check out the complete list of installing commands for macOS system [here](https://git-scm.com/download/mac)
+## Configuring Git
 
-#### Windows
-Installing Git on Windows is hassle-free. Just go to the download [page](https://git-scm.com/download/win), click on the specific Windows version, and download and install the setup. 
-
-For more reference on how to install **Git** in your operating system, check ["Git Install Tutorial"](https://www.datacamp.com/tutorial/git-install-tutorial)
-
-### Configuring Git
-
-#### After installing Git, we need to set a username and email adress that will be used as identification to any change made on a repository.
+After installing **Git**, we need to set a *username* and *e-mail adress* that will be used as identification to any change made on a repository.
 ```
 git config --global user.name "your-user-name"
 git config --global user.email "your@email.com"
