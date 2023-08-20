@@ -24,7 +24,7 @@ In addition to configuring a *remote repository* URL, you may also need to set g
 Git stores configuration options in three separate files, which lets you scope options to individual repositories (local), user (Global), or the entire system (system):
 
 |  **Scope**               |   **Description**   |
-|  :---                    |  :----         |       
+|  :---                    |  ----         |       
 |  `Local`                 |  By default, `git config` will write to a *local level* if no configuration option is passed. Local level configuration is applied to the context repository `git config` gets invoked in.   |
 |  `Global`                |  **Global** level configuration is *user-specific*, meaning it is applied to an operating system user. **Global** configuration values are stored in a file that is located in a user's home directory.    |  
 |  `System`                |  **System-level** configuration is applied across an *entire machine*. This covers all users on an operating system and all repos. The system level configuration file lives in a `git config` file off the system root path.   |  
@@ -100,18 +100,33 @@ In this new section, selec the **repository name field** and type ***Git Project
 
 Your *public remote repository* might look like the following:
 
-![image](https://github.com/artghieri/Student-Guide---The-C-Language/assets/102708433/0dd6ae39-eb76-4e32-aa7a-75ae7853d068)
+![261871782-0dd6ae39-eb76-4e32-aa7a-75ae7853d068](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/913be38e-32a9-496d-b20b-0cd64c480543)
 
-## Cloning a GitHub Repository
+## Clonning 
 
-when we clone a *remote repository*, we are actually making a copy of the original repository from a *remote server* - GitHub, in this case - to a *local repository* - your machine.
+If a project has already been set up in a central repository, the clone command is the most common way for users to obtain a local development clone. `git clone` is primarily used to point to an existing repo and make a clone or copy of that repo at in a new directory, at another location.
 
-#### We can simply clone the repository by providing an HTTPS link. 
+The `git clone` command copies an existing **Git** repository making a completely isolated environment from the original repository. As a convenience, cloning automatically creates a remote connection called "origin" pointing back to the original repository. This makes it very easy to interact with a central repository.
+
+```julia
+git clone your_repository_url 
 ```
-git clone your_repository_url
-```
+
+#
+
+### Git URLs
+
+**Git** has its own URL syntax which is used to pass remote repository locations to **Git** commands. `git clone` is most commonly used on remote repositories and supports a few different network protocols and corresponding URL formats. 
+
+| **Protocol**          |     **Description**        |
+| :----------:            | -------                    |
+| `SSH`   | Secure Shell (SSH) is a authenticated network protocol that is commonly configured by default on most servers. Because SSH is an authenticated protocol, you'll need to establish credentials with the hosting server before connecting. |
+| `GIT`   | A protocol unique to git. Git comes with a daemon that runs on port (9418). The protocol is similar to SSH however it has NO AUTHENTICATION |
+| `HTTPS`   | Hyper Text Transfer Protocol. The protocol of the web, most commonly used for transferring web page HTML data over the Internet. | 
 
 # 
+
+We can simply clone the repository by providing an HTTPS link.
 
 #### And the expected terminal output should be like this:
 ```
