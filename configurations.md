@@ -11,7 +11,7 @@ Git supports all operating systems. You can install it using command-line tools 
 > [!Note]
 > For more reference on how to install **Git** in your operating system, check *["Git Install Tutorial"](https://www.datacamp.com/tutorial/git-install-tutorial)*
 
-# 
+<br>
 
 ## Configuring Git
 
@@ -21,7 +21,7 @@ git config --global user.name "your-user-name"
 git config --global user.email "your@email.com"
 ```
 
-# 
+<br>
 
 ## Starting a new Project
 Let's start creating our first project on **GitHub**.
