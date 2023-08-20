@@ -31,17 +31,15 @@ git config --global user.email "your@email.com"
 
 ### Creating a new Repository
 
-At first, go to your repositories and select the `new` icon to create a remote repository.
+To start a new project, move to `Your Repository` page on **GitHub** and select the `new` icon to create a *remote repository*.
 
 ![new-icon](https://user-images.githubusercontent.com/102708433/195996708-dd47591d-52b6-4405-b0ff-0f650cffaeda.png)
 
-<br>
-
-After that, type the repository name, to this example i will use "My First Project", and add a simple description. 
-
-It will create an empty public repository. 
+# 
 
 <br>
+
+With the *remote repository* open, type the *repository name* as you wish. In this example we'll be using **My First Project** as title. It will be created an empty *public repository*. 
 
 ![create-repo](https://user-images.githubusercontent.com/102708433/195996838-4d66f175-4df6-493d-a479-5578631cc8b4.png)
 
@@ -52,8 +50,15 @@ It will create an empty public repository.
 
 # 
 
-This is how our fisr **GitHub** repository looks like.
+<br>
+ 
+Done all the previously following steps, the *public repository* should look like this.
+
 ![Captura de tela 2022-10-15 131804](https://user-images.githubusercontent.com/102708433/196002486-9cdd5e13-b2d3-4e9b-b5b9-2df4818a97a0.png)
+
+# 
+
+<br>
 
 ### Cloning a GitHub Repository
 Cloning a remote repository means that we are making a copy of the repository from a remote server (GitHub) to remote directory.
