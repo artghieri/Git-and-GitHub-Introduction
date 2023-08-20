@@ -116,38 +116,61 @@ git clone your_repository_url
 
 | **Protocol**          |     **Description**        |
 | :----------:            | -------                    |
-| `SSH`   | Secure Shell (SSH) is a authenticated network protocol that is commonly configured by default on most servers. Because SSH is an authenticated protocol, you'll need to establish credentials with the hosting server before connecting. |
-| `GIT`   | A protocol unique to git. Git comes with a daemon that runs on port (9418). The protocol is similar to SSH however it has NO AUTHENTICATION |
-| `HTTPS`   | Hyper Text Transfer Protocol. The protocol of the web, most commonly used for transferring web page HTML data over the Internet. | 
+| `SSH`     | **Secure Shell (SSH)** is a authenticated network protocol that is commonly configured by default on most servers. Because SSH is an authenticated protocol, you'll need to establish credentials with the hosting server before connecting. |
+| `GIT`     | A protocol unique to git. **Git** comes with a daemon that runs on port (9418). The protocol is similar to SSH however it has no authentification. |
+| `HTTPS`   | **Hyper Text Transfer Protocol**. The protocol of the web, most commonly used for transferring web page HTML data over the Internet. | 
+
+<br>
+
+> For more reference, check the documentation *[git-clone](https://git-scm.com/docs/git-clone)*
 
 # 
 
+### Clonning a Remote Repository
 
+To initialize our project, first we need to pull all files from the *remote repository* located on **GitHub**. In this case, we're clonning the *remote repository* by providing an **HTTPs** link.
 
-We can simply clone the repository by providing an HTTPS link.
-
-#### And the expected terminal output should be like this:
+```julia
+git clone https://github.com/username/Git-Project
 ```
-Cloning into 'My-First-Project'...
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), 597 bytes | 59.00 KiB/s, done.
-```
+
+Succeed the cloning of the *remote directory* appointed before, it will be created in your machine a *local repository* of `Git Project`.
+
+![image](https://github.com/artghieri/Student-Guide---The-C-Language/assets/102708433/6559093f-a95a-416d-a728-8581f212ea37)
 
 # 
 
-Succeed the cloning of the *remote directory* appointed before, was created on my *local repository* a copy of `My-First-Project`.
+<br>
 
-![Captura de tela 2022-10-15 141718](https://user-images.githubusercontent.com/102708433/195999480-16a6dc07-e5f6-458b-9b21-a6531f1b83dc.png)
+## Repository and File Modifications
 
-# 
+When working in **Git**, the concept of "saving" is a more nuanced process than saving in a traditional file editing applications. A *commit* is the **Git** equivalent of a "save". Traditional saving should be thought of as a file system operation that is used to overwrite an existing file or write a new file. Alternatively, **Git** *committing* is an operation that acts upon a collection of files and directories.
 
-### Adding Files to the Project
+**Git** *commits* can be captured and built up ***locally***, then pushed to a ***remote server*** as needed using the `git push -u origin main` command. 
 
+A **Git** repository can be configured to ignore specific files or directories. This will prevent **Git** from saving changes to any ignored content. **Git** has multiple methods of configuration that manage the ignore list.
 
+#
 
-You can add any directory, file, or data after the initial command `git add`. 
+### Git Add
+
+The `git add` command adds a change in the **working directory** to the **staging area**. It tells **Git** that you want to include updates to a particular file in the next *commit*. However, `git add` doesn't really affect the repository in any significant way—changes are not actually recorded until you run `git commit`.
+
+In conjunction with these commands, you'll also need `git status` to view the state of the working directory and the staging area.
+
+> For more reference, check the documentation : *[git-add](https://git-scm.com/docs/git-add)*
+
+#
+
+### Workflow
+
+The `git add` and `git commit` commands compose the fundamental **Git** workflow. They are the means to record versions of a project into the repository’s history.
+
+Developing a project revolves around the basic edit/stage/commit pattern. First, you edit your files in the working directory. When you’re ready to save a copy of the current state of the project, you stage changes with `git add`. After you’re happy with the staged snapshot, you *commit* it to the project history with `git commit`.
+
+In addition to `git add` and `git commit`, a third command `git push` is essential for a complete collaborative **Git** workflow. `git push` is utilized to send the *committed* changes to *remote repositories* for collaboration. 
+
+#
 
 ```
 git add url file.file
