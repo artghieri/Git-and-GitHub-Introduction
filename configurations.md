@@ -46,7 +46,7 @@ With the *remote repository* open, type the *repository name* as you wish. In th
 <br>
 
 > [!IMPORTANT]
-> **Don't forget to check `Add a README file` it will be used in our example.**
+> **Don't forget to check `Add a README file`, it will be used in our example.**
 
 # 
 
@@ -58,15 +58,16 @@ Done all the previously following steps, the *public repository* should look lik
 
 # 
 
-<br>
-
 ### Cloning a GitHub Repository
-Cloning a remote repository means that we are making a copy of the repository from a remote server (GitHub) to remote directory.
+
+when we clone a *remote repository*, we are actually making a copy of the original repository from a *remote server* - GitHub, in this case - to a *local repository* - your machine.
 
 #### We can simply clone the repository by providing an HTTPS link. 
 ```
 git clone your_repository_url
 ```
+
+# 
 
 #### And the expected terminal output should be like this:
 ```
@@ -77,12 +78,15 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), 597 bytes | 59.00 KiB/s, done.
 ```
 
-#### After cloning the remote directory from GitHub, was created in my local repository a copy of `My-First-Project`.
+# 
+
+Succeed the cloning of the *remote directory* appointed before, was created on my *local repository* a copy of `My-First-Project`.
+
 ![Captura de tela 2022-10-15 141718](https://user-images.githubusercontent.com/102708433/195999480-16a6dc07-e5f6-458b-9b21-a6531f1b83dc.png)
 
----
+<br>
 
-> **Warning**
+> [!IMPORTANT]
 > **Before we add files to our repository, make sure you are in the correct local directory on terminal.**
 
 ```
