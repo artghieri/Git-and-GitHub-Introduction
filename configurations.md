@@ -55,7 +55,7 @@ git config --global user.email "your@email.com"
 
 #
 
-### Defining shortcuts
+#### Defining shortcuts
 This is a powerful utility to create custom shortcuts for commonly used *git commands*. Take an example:
 
 ```julia
@@ -69,7 +69,7 @@ This creates a `ci command` that you can execute as a shortcut to `git commit`.
 > For more reference about git shortcuts, check: *["Git Basics - Git Aliases"](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases)*
 
 ## Example 
-After installing **Git**, the first thing to do it is to define your your identification settings, as discussed before. A typical initial configuration might look something like the following:
+After installing **Git**, the first thing to do it is to define your identification settings, as discussed before. A typical initial configuration might look something like the following:
 
 ```julia
 git config --global user.name "Nicholas Chiuz"
@@ -79,37 +79,25 @@ git config --global alias.co checkout
 git config --global alias.st status
 ```
 
-#
+## Creating a Project
 
-<br>
+When it comes about creating a new *repository*, you can choose between start a new project through the command inline `git init`, or manually creating a new repository on **GitHub**. For didactic and visual purposes, let's take the second option.
 
----
+### Creating a new Repository on GitHub
 
-## Creating a New Project on GitHub
+Go to `Your Repositories` page and select the `new` icon to create a *remote repository*.
 
-### Creating a new Repository
+![261873484-f6af7dc7-536d-4c29-842e-6edf23cb4d66](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/eb00ca2c-743b-4287-8622-a5f9caaffe6d)
 
-To start a new project, move to `Your Repository` page on **GitHub** and select the `new` icon to create a *remote repository*.
+In this new section, selec the **repository name field** and type ***Git Project***. We'll be using this name to refer to our new project. 
 
-![new-icon](https://user-images.githubusercontent.com/102708433/195996708-dd47591d-52b6-4405-b0ff-0f650cffaeda.png)
-
-# 
-
-<br>
-
-With the *remote repository* open, type the *repository name* as you wish. In this example we'll be using **My First Project** as title. It will be created an empty *public repository*. 
-
-![create-repo](https://user-images.githubusercontent.com/102708433/195996838-4d66f175-4df6-493d-a479-5578631cc8b4.png)
+![261871669-18770313-9882-492e-a97e-0f2a2c4f17e3](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/0d2df648-0192-44b9-9897-01dcabb465a5)
 
 <br>
 
 > [!IMPORTANT]
-> **Don't forget to check `Add a README file`, it will be used in our example.**
+> **Don't forget to check `"Add a README file"`.**
 
-# 
-
-<br>
- 
 Done all the previously following steps, the *public repository* should look like this.
 
 ![Captura de tela 2022-10-15 131804](https://user-images.githubusercontent.com/102708433/196002486-9cdd5e13-b2d3-4e9b-b5b9-2df4818a97a0.png)
