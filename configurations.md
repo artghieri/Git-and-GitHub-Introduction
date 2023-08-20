@@ -41,12 +41,14 @@ It will create an empty public repository.
 
 ![create-repo](https://user-images.githubusercontent.com/102708433/195996838-4d66f175-4df6-493d-a479-5578631cc8b4.png)
 
+<br>
+
 > [!IMPORTANT]
 > **Don't forget to check `Add a README file` it will be used in our example.**
 
 # 
 
-#### This is how our fisr GitHub repository looks like.
+This is how our fisr **GitHub** repository looks like.
 ![Captura de tela 2022-10-15 131804](https://user-images.githubusercontent.com/102708433/196002486-9cdd5e13-b2d3-4e9b-b5b9-2df4818a97a0.png)
 
 ### Cloning a GitHub Repository
