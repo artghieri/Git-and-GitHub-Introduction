@@ -8,10 +8,10 @@ Git supports all operating systems. You can install it using command-line tools 
 |  `MacOS`  |  If you have [homebrew](https://brew.sh) installed, use this command to download and install **Git**: `brew install git`. If it's not the case, check out the complete list of installing commands for `macOS` system [here](https://git-scm.com/download/mac) |
 |  `Windows` | Installing **Git** on `Windows` is hassle-free. Just go to the download [page](https://git-scm.com/download/win), click on the specific Windows version, and download and install the setup.  |
 
-> [!NOTE]
+> [!Note]
 > For more reference on how to install **Git** in your operating system, check *["Git Install Tutorial"](https://www.datacamp.com/tutorial/git-install-tutorial)*
 
-<br>
+---
 
 ## Configuring Git
 
