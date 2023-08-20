@@ -90,7 +90,7 @@ Go to `Your Repositories` page and select the `new` icon to create a *remote rep
 ![261873484-f6af7dc7-536d-4c29-842e-6edf23cb4d66](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/eb00ca2c-743b-4287-8622-a5f9caaffe6d)
 
 In this new section, selec the **repository name field** and type ***Git Project***. We'll be using this name to refer to our new project. 
-![261873876-0d2df648-0192-44b9-9897-01dcabb465a5](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/0971f594-c220-4b36-a7b5-759cb23d03c8)
+![261873876-0d2df648-0192-44b9-9897-01dcabb465a5](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/385fe681-e22c-4473-bf3f-3c3a1ec97aed)
 
 ![261873876-0d2df648-0192-44b9-9897-01dcabb465a5](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/809a9e85-3947-4994-90be-8776e417a653)
 
