@@ -93,18 +93,16 @@ In this new section, selec the **repository name field** and type ***Git Project
 
 ![261871669-18770313-9882-492e-a97e-0f2a2c4f17e3](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/0d2df648-0192-44b9-9897-01dcabb465a5)
 
-<br>
-
 > [!IMPORTANT]
 > **Don't forget to check `"Add a README file"`.**
 
-Done all the previously following steps, the *public repository* should look like this.
+<br>
 
-![Captura de tela 2022-10-15 131804](https://user-images.githubusercontent.com/102708433/196002486-9cdd5e13-b2d3-4e9b-b5b9-2df4818a97a0.png)
+Your *public remote repository* might look like the following:
 
-# 
+![image](https://github.com/artghieri/Student-Guide---The-C-Language/assets/102708433/0dd6ae39-eb76-4e32-aa7a-75ae7853d068)
 
-### Cloning a GitHub Repository
+## Cloning a GitHub Repository
 
 when we clone a *remote repository*, we are actually making a copy of the original repository from a *remote server* - GitHub, in this case - to a *local repository* - your machine.
 
