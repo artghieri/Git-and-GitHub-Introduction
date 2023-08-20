@@ -91,6 +91,7 @@ Go to `Your Repositories` page and select the `new` icon to create a *remote rep
 
 In this new section, selec the **repository name field** and type ***Git Project***. We'll be using this name to refer to our new project. 
 ![261873876-0d2df648-0192-44b9-9897-01dcabb465a5](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/385fe681-e22c-4473-bf3f-3c3a1ec97aed)
+![261873876-0d2df648-0192-44b9-9897-01dcabb465a5](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/bf5deca8-99ff-4fb3-9f48-62356e3881db)
 
 ![261873876-0d2df648-0192-44b9-9897-01dcabb465a5](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/809a9e85-3947-4994-90be-8776e417a653)
 
