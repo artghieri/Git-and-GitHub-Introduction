@@ -64,11 +64,15 @@ git config --global alis.ci commit
 
 This creates a `ci command` that you can execute as a shortcut to `git commit`.
 
+<br>
+
+> For more reference about git shortcuts, check: *["Git Basics - Git Aliases"](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases)*
+
 ## Example 
-The first thing you’ll want to do after installing Git is tell it your name/email and customize some of the default settings. A typical initial configuration might look something like the following:
+After installing **Git**, the first thing to do it is to define your your identification settings, as discussed before. A typical initial configuration might look something like the following:
 
 ```julia
-git config --global user.name "Nicholas Chiuzi"
+git config --global user.name "Nicholas Chiuz"
 git config --global user.email "nicholas@example.com"
 
 git config --global alias.co checkout
