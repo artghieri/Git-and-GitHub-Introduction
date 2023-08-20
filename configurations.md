@@ -1,4 +1,4 @@
-## Installing Git
+## Git Install
 
 Git supports all operating systems. You can install it using command-line tools or directly download and install the setup.
 
@@ -15,13 +15,66 @@ Git supports all operating systems. You can install it using command-line tools 
 
 <br>
 
-## Configuring Git
+## Configurations
 
-After installing **Git**, we need to set a *username* and *e-mail adress* that will be used as identification to any change made on a repository.
-```
+In addition to configuring a *remote repository* URL, you may also need to set global **Git** configuration options such as *username*, or *email*. The `git config` command lets you configure your **Git** installation (or an individual repository) from the command line on your terminal. This command can define everything from **user info, to preferences, to the behavior of a repository.** 
+
+### Git Configuration Levels and Files
+
+Git stores configuration options in three separate files, which lets you scope options to individual repositories (local), user (Global), or the entire system (system):
+
+|  **Scope**               |   **Description**   |
+|  :---                    |  :----         |       
+|  `Local`                 |  By default, `git config` will write to a *local level* if no configuration option is passed. Local level configuration is applied to the context repository `git config` gets invoked in.   |
+|  `Global`                |  **Global** level configuration is *user-specific*, meaning it is applied to an operating system user. **Global** configuration values are stored in a file that is located in a user's home directory.    |  
+|  `System`                |  **System-level** configuration is applied across an *entire machine*. This covers all users on an operating system and all repos. The system level configuration file lives in a `git config` file off the system root path.   |  
+
+> [!NOTE]
+> Thus the order of priority for configuration levels is: **local, global, system**. This means when looking for a configuration value, **Git** will start at the local level and bubble up to the system level.
+
+#
+
+### Defining User Information
+
+As you start your first project and any eventually process that you may apply on future, you first need to define the *author name* ( username ) to be used for all *commits* in the current repository. Tipically, it's used the `--global` flag to set configuration profile for the current user which will be use as a identifier of your operations.
+
+#### Defining username
+```julia
 git config --global user.name "your-user-name"
+```
+
+#
+
+#### Defining e-mail
+```julia
 git config --global user.email "your@email.com"
 ```
+
+Define the *username* and the *e-mail* to be used for all commits by the current user.
+
+#
+
+### Defining shortcuts
+This is a powerful utility to create custom shortcuts for commonly used *git commands*. Take an example:
+
+```julia
+git config --global alis.ci commit
+```
+
+This creates a `ci command` that you can execute as a shortcut to `git commit`.
+
+## Example 
+The first thing you’ll want to do after installing Git is tell it your name/email and customize some of the default settings. A typical initial configuration might look something like the following:
+
+```julia
+git config --global user.name "Nicholas Chiuzi"
+git config --global user.email "nicholas@example.com"
+
+git config --global alias.co checkout
+git config --global alias.st status
+```
+
+#
 
 <br>
 
@@ -84,18 +137,12 @@ Succeed the cloning of the *remote directory* appointed before, was created on m
 
 ![Captura de tela 2022-10-15 141718](https://user-images.githubusercontent.com/102708433/195999480-16a6dc07-e5f6-458b-9b21-a6531f1b83dc.png)
 
-<br>
+# 
 
-> [!IMPORTANT]
-> **Before we add files to our repository, make sure you are in the correct local directory on terminal.**
+### Adding Files to the Project
 
-```
-cd repository_name
-```
 
----
 
-### Adding Project Files
 You can add any directory, file, or data after the initial command `git add`. 
 
 ```
