@@ -222,114 +222,104 @@ Changes to be committed:
         new file:   document.txt
 ```
 
+Finishing the modifications, we are gonna use the command `git commit` and the command `git push` to update all the modified files in the *local repository* to our *remote repository*.
 
+#
 
-#### Your directory shoud look like this
-![Captura de tela 2022-10-15 150312](https://user-images.githubusercontent.com/102708433/196002551-46d64c0c-b2cc-4e02-9d29-94690e32ee90.png)
-
-
-#### Use the follow command on terminal.
-```
-git add .
-```
-#### And then use the follow command on terminal.
-```
-git status
-```
-
-#### And the expected terminal output should be like this:
-```
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   README.md
-        new file:   textfile.txt
-```
-
-#### Now our files have been modified and staged in the local directory, needed to be ready (commited) to be upload on GitHub.
-
-## Commit
-We will commit all the changes with a simple message, and the output shows all the new files in create mode.
-
-```
+```julia
 git commit -m "my first commit"
 ```
 
-#### And the expected terminal output should be like this:
-```
-[main 423f731] my first commit
- 2 files changed, 3 insertions(+), 1 deletion(-)
- create mode 100644 textfile.txt
- ```
- 
- > **Note**
- > **If you want to send to your remote server a specific commit to differents files, follow this order to each file:**
- ```
- git add url file.file
- 
- git commit -m "my commit"
-```
+By default, `git commit` will open up the locally configured text editor, and prompt for a *commit* message to be entered. Passing the -m option will forgot the text editor prompt in-favor of an inline message.
 
-#### If you type git status again on terminal this is the expected output:
-```
-On branch main
-Your branch is ahead of 'origin/main' by 1 commit.
-  (use "git push" to publish your local commits)
+#
 
-nothing to commit, working tree clean
-```
-#### Now our files are ready to be upload to GitHub.
-
-### Push
-Syncing with GitHub remote repository requires a remote name and branch name `git push <remote-name> <branch-name>`. 
-
-If you have only one remote and one branch, then using `git push` will work.   
-
-After `git push`, the pop-up window will ask for the credentials, just add your GitHub username or password. 
-
-[Create a Personal Acess Token](https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to use in the password field instead of your GitHub passsword.
-
-
-```
+```julia
 git push
 ```
 
+The `git push` command is used to upload *local repository* content to a *remote repository*. Pushing is how you transfer *commits* from your *local repository* to a *remote repository*. 
 
-We are going to check our GitHub repository to see whether we have successfully pushed the changes to remote. 
+`git push` is most commonly used to publish an upload local changes to a central repository. After a local repository has been modified a push is executed to share the modifications with remote team members.
 
-![Captura de tela 2022-10-15 152437](https://user-images.githubusercontent.com/102708433/196002456-3c73b3ae-2208-49c5-b26d-24f7f83e9064.png)
+<br>
+
+> For more reference, check the documentation: *[git-push](https://git-scm.com/docs/git-push/en)*
+
+#
+
+#### And our Git-Project might look like this:
+
+![261872174-09295943-95c6-42ae-946a-2bde566fe643](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/efdcc608-1e07-4050-b515-645edd26c9cd)
 
 ## Branches
-It is recommended to work with branches: for example, if you want to work on project documentation, create a documentation branch using `git checkout` or `git branch`. Make changes in the README file and when you have finalized the changes, merge the branch with the base.  
 
-In our case, we have created and switched to a new branch called `project`
+A branch represents an independent line of development. Branches serve as an abstraction for the edit/stage/commit process. You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.
 
-```
-git checkout -b project
-```
+The `git branch` command lets you create, list, rename, and delete branches. It doesn’t let you switch between branches or put a forked history back together again. For this reason, `git branch` is tightly integrated with the `git checkout` and `git merge` commands.
 
-Open the README.md file and write on it "This is a new branch". After that,  we will stage changes and save a snapshot of changes with a message.
+<br>
 
-```
-git add README.md
+> For more reference, check the documentation: *[git-branch](https://git-scm.com/docs/git-branch)* and *[git-checkout](https://git-scm.com/docs/git-checkout)*
 
-git commit -m "this is a commit from a different branch"
-```
+# 
 
-The remote repository doesn't have a readme branch. To create a new branch and push changes, we will use *"project"*. 
+Therefore, we are gonna crete a new branch using `git-checkout` command.
 
-The output of the command shows that new branches have been created and both local and remote `project` branches are synced. 
-
-```
-git push origin project
+```julia
+git checkout -b "new-branch"
 ```
 
-#### This is how your GitHub should looks like
-![Captura de tela 2022-10-15 154355](https://user-images.githubusercontent.com/102708433/196003059-40d6799a-8130-4815-8b63-bef4c38b6904.png)
+It's important to understand that branches are just pointers to commits. When you create a branch, all Git needs to do is create a new pointer, it doesn’t change the repository in any other way.
 
-![Captura de tela 2022-10-15 154412](https://user-images.githubusercontent.com/102708433/196003103-9d5bdf03-6f13-4549-9a15-094176b04370.png)
+#
+
+Open the `README.md` file in your *local repository* and change the text for the following:
+
+```julia
+## World, Hello
+
+This is my *first project* using **Git** and **GitHub**.
+```
+
+Now we are gonna *stage* our modification using `git commit` command and update the *remote repository* with `git push`.
+
+```julia
+git commit -m "my second commit
+```
+
+```julia
+git push origin new-branch
+```
+#
+
+#### And our Git-Project might look like this:
+
+![261872457-155b0c56-163d-40b3-91fe-85002c836ee6](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/965e7ccb-9164-41e2-a054-5de729e1c06d)
+
+![261872544-934c603e-1137-4c31-924d-1ac47be3d1c6](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/6aa4ddab-cadc-49fd-9a8d-cb309d40c15b)
+
+
+## Git Merge and Git Pull
+
+Merging is Git's way of putting a forked history back together again. The `git merge` command lets you take the independent lines of development created by git branch and integrate them into a single branch.
+
+Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches. 
+
+```julia
+git merge branch-to-merge
+```
+> For more reference, check *[git-merge](https://www.w3schools.com/git/git_branch_merge.asp?remote=github)*
+
+<br>
+
+Meanwhile, the `git pull` command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. Merging remote upstream changes into your local repository is a common task in Git-based collaboration work flows. 
+
+```julia
+git pull
+```
+
+> For more reference, check *[git-pull](https://www.w3schools.com/git/git_pull.asp?remote=github)*
 
 
 ## Pull Request
