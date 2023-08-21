@@ -300,11 +300,11 @@ git push origin new-branch
 ![261872544-934c603e-1137-4c31-924d-1ac47be3d1c6](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/6aa4ddab-cadc-49fd-9a8d-cb309d40c15b)
 
 
-## Git Merge and Git Pull
+## Merging and Pull Request
 
-Merging is Git's way of putting a forked history back together again. The `git merge` command lets you take the independent lines of development created by git branch and integrate them into a single branch.
+Merging is Git's way of putting a forked history back together again. The `git merge` command lets you take the independent lines of development created by `git branch` and integrate them into a single branch.
 
-Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches. 
+Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, `git merge` is used to combine two branches. 
 
 ```julia
 git merge branch-to-merge
@@ -313,7 +313,7 @@ git merge branch-to-merge
 
 <br>
 
-Meanwhile, the `git pull` command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. Merging remote upstream changes into your local repository is a common task in Git-based collaboration work flows. 
+Meanwhile, the `git pull` command is used to fetch and download content from a *remote repository* and immediately update the local repository to match that content. Merging remote upstream changes into your *local repository* is a common task in Git-based collaboration work flows. 
 
 ```julia
 git pull
@@ -321,20 +321,19 @@ git pull
 
 > For more reference, check *[git-pull](https://www.w3schools.com/git/git_pull.asp?remote=github)*
 
+#
 
-## Pull Request
-This functionality is common for organizations. For example,  a software developer has worked on a new feature and wants to merge changes to the main remote branch. We will now create pull requests using GitHub GUI by clicking on the pull request button. 
+#### In this case the merge and pull request we're made by simply following the steps on **Git Project** *remote repository* as is shown in the following steps after select the `Compare & Pull request` button.
 
-After that, select the readme branch  which we want to merge with the base (main). You can type a detailed explanation of what features were added and click on the pull request button. 
+![image](https://github.com/artghieri/Student-Guide---The-C-Language/assets/102708433/45446205-c097-4e34-843f-336c42e5cf28)
 
-![Captura de tela 2022-10-15 154817](https://user-images.githubusercontent.com/102708433/196003164-7d590a21-b94d-42dd-8c67-ac7f5511e556.png)
+![image](https://github.com/artghieri/Student-Guide---The-C-Language/assets/102708433/8d4f0e2b-f342-499e-8ada-332a0788c8f3)
 
-The maintainer of the repository will compare your changes and merge them when they have passed all the tests. In our case, you are the maintainer, so click on the merge request to blend changes with the main branch. 
+![image](https://github.com/artghieri/Student-Guide---The-C-Language/assets/102708433/7146b9ae-ae09-48dc-976f-adbb3bf727b3)
 
-![merge](https://user-images.githubusercontent.com/102708433/196003328-b3755345-3d5a-4640-8610-e6ad26d7c08d.png)
+The `main branch` was merged with the `new-branch`, changing the `main branch` `README.md` file content.
 
-![merge](https://user-images.githubusercontent.com/102708433/196003333-eb117df6-70a7-4ab8-a068-a47724d183c0.png)
+![261872660-70ca5152-3154-41f1-9af1-e006f5b2f3d6](https://github.com/artghieri/Git-and-GitHub-Introduction/assets/102708433/fe2c0f87-dc4b-4e94-847e-02b77abe8fc6)
 
-Congratulations, we have successfully created a pull request and merged it with the main branch. You can view the changes on the main branch here. 
 
-![merge](https://user-images.githubusercontent.com/102708433/196003355-5e41db19-1002-47df-a1bf-df53870d6f30.png)
+---
