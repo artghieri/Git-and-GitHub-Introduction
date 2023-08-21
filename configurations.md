@@ -285,11 +285,11 @@ This is my *first project* using **Git** and **GitHub**.
 Now we are gonna *stage* our modification using `git commit` command and update the *remote repository* with `git push`.
 
 ```julia
-git commit -m "my second commit
+git commit -m "my second commit"
 ```
 
 ```julia
-git push origin new-branch
+git push origin "new-branch"
 ```
 #
 
