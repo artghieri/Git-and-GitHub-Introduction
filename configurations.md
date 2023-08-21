@@ -154,9 +154,11 @@ A **Git** repository can be configured to ignore specific files or directories. 
 
 ### Git Add
 
-The `git add` command adds a change in the **working directory** to the **staging area**. It tells **Git** that you want to include updates to a particular file in the next *commit*. However, `git add` doesn't really affect the repository in any significant way—changes are not actually recorded until you run `git commit`.
+The `git add` command adds a change in the **working directory** to the **staging area**. It tells **Git** that you want to include updates to a particular file in the next *commit*. However, `git add` doesn't really affect the repository in any significant way-changes are not actually recorded until you run `git commit`.
 
 In conjunction with these commands, you'll also need `git status` to view the state of the working directory and the staging area.
+
+<br>
 
 > For more reference, check the documentation : *[git-add](https://git-scm.com/docs/git-add)*
 
@@ -170,31 +172,57 @@ Developing a project revolves around the basic edit/stage/commit pattern. First,
 
 In addition to `git add` and `git commit`, a third command `git push` is essential for a complete collaborative **Git** workflow. `git push` is utilized to send the *committed* changes to *remote repositories* for collaboration. 
 
-#
+<br>
+
+> For more reference, check the documentation *[git-commit](https://git-scm.com/docs/git-commit)*
+
+<br>
+
+## Project Modifications
+
+Proceeding the with the work done in the previously topics, after creating a *local repository* and pull all the original files from **Git-Project** that was created in the begining, we'll add a new archive to the project.
+
+Inside the *"Git-Project"* folder, create a `document.txt` with the following text: *My first document*. Might look like the following image:
+
+![image](https://github.com/artghieri/Student-Guide---The-C-Language/assets/102708433/29173016-8e08-4907-bbb0-4a97f21082f2)
+
+Open the `README.md` file and change the text for the following:
 
 ```
-git add url file.file
+## Hello World
+
+This is my *first project* using **Git** and **GitHub**.
 ```
 
-> **Note**
-> **There's no need for URL if the file is on the root of your local directory.**
+# 
 
-If you want to add all files to the staging area, then use dot. 
+### Adding, Commiting and Pushing Files
 
-```
+After all files modifications has been made, we can *stage* all changes with the command inline `git add .`.
+
+```julia
 git add .
 ```
 
-#### Open the file README.md in your local directory with any text editor and write the follow sentence:
-```
-Hello, World.
-This is my First Project.
+> [!NOTE]
+> You can always check any changes made with `git status` command.
+
+<br>
+
+With `git status` command it's possible to visualize any change that has been made in the files in your *local repository*. As you can see in the expected following message:
+
+```julia
+git status
 ```
 
-#### Create a new textfile in the root of your local directory and write the follow sentence:
+```julia
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        new file:   document.txt
 ```
-This is a text file.
-```
+
+
 
 #### Your directory shoud look like this
 ![Captura de tela 2022-10-15 150312](https://user-images.githubusercontent.com/102708433/196002551-46d64c0c-b2cc-4e02-9d29-94690e32ee90.png)
